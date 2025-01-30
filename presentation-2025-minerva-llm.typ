@@ -72,13 +72,13 @@
 - Ricercatore all'Università di Bologna
   - *Temi*: Intellingenza Artificiale Collettiva, Apprendimento Automatico (recentemente anche _Language Models_)
 - Prof. a Contratto in Ingegneria E Scienze Informatiche
-  - Corsi su Paradigmi di Sviluppo e la integrazione con l'AI
-- Per contatti: gianluca.aguzzi\@unibo.it
+  - Corsi su Paradigmi di Programmazione (e apprendimento automatico)
+- Per contatti: *gianluca.aguzzi\@unibo.it*
 
 == Outline
-=== Temi che verranno trattati:
-- Introduzione agli LLM: Cosa sono, come funzionano e perché sono rivoluzionari
-- Applicazioni degli LLM nella Vita quotidiana
+=== Temi che verranno trattati#footnote[Alcune immagini e contenuti sono stati presi da #link("https://www.youtube.com/watch?v=LPZh9BOjkQs", "3Blue1Brown"), se volete approfondire vi consiglio di visitare il suo canale YouTube]:
+- *Introduzione agli LLM*: Cosa sono, come funzionano e perché sono rivoluzionari
+- *Applicazioni* degli LLM nella Vita quotidiana
 
 
 = Introduzione
@@ -99,13 +99,41 @@
 
 ]
 
-== Rete Neurale Artificiale
+== Rete Neurale Artificiale (Artificial Neural Network)
 - *Rete Neurale* 🧠: modello computazionale ispirato al funzionamento del cervello umano
   - *Neuroni* 🧠: unità computazionale che riceve input e produce output
   - *Connessioni* 🧠: collegamenti tra neuroni che trasmettono segnali
   - *Strati* 🧠: insieme di neuroni collegati in modo sequenziale
-- Questa struttura permette di *apprendere* da dati e *risolvere problemi* complessi
-  - Comprendere immagini, audio e testo 📸🔊📝
+#align(center)[
+  #image("figures/artificiale-normale.png", width: 50%)
+]
+//- Questa struttura permette di *apprendere* da dati e *risolvere problemi* complessi
+//  - Comprendere immagini, audio e testo 📸🔊📝
+
+== Rete Neural Artificiale Profonda (Deep Neural Network) 
+- *Rete Neurale Profonda* 🧠: rete neurale con *molti strati* di neuroni
+  - *Strati Nascosti* 🧠: strati intermedi tra input e output
+  - *Deep Learning* 🧠: tecnica di apprendimento automatico basata su reti neurali profonde
+    - _Supervisionato_ #fa-arrow-right() #h(0.2em) Coppie di input-output etichettate (es. immagini con etichette)
+    - _Non Supervisionato_ #fa-arrow-right() #h(0.2em) Dati non etichettati (es. immagini, testo) 
+    - Le reti imparano ad estrarre *pattern* rilevanti dai dati senza bisogno di regole esplicite
+#align(center)[
+  #image("figures/deep-network.png", width: 50%)
+]
+
+== Perché Apprendere il Linguaggio è importante?
+- Il Linguaggio è uno dei mezzi per esprimere la nostra intelligenza 🗣️
+  - *Comunicazione*, *apprendimento*, *ragionamento* 🤔
+  - Misurare l'intelligenza attraverso il linguaggio #fa-arrow-right() _Test di Turing_ 🤖
+
+- Se un AI può comprendere e generare linguaggio, può:
+  - Interagire con gli umani in modo più naturale 👥
+  - Apprendere da testi e conversazioni 📚
+  
+  - Risolvere problemi complessi 🧠
+#align(center)[
+  #image("figures/idea-test-di-turing.jpg", width: 30%)
+]
 
 == Come - Generazione del testo
 #image("figures/1.png")
@@ -116,15 +144,29 @@
 == Come - Generazione del testo
 #image("figures/3.png")
 
-== Perché Apprendere il Linguaggio è importante?
-- Il Linguaggio è uno dei mezzi per esprimere la nostra intelligenza 🗣️
-  - *Comunicazione*, *apprendimento*, *ragionamento* 🤔
-  - Misurare l'intelligenza attraverso il linguaggio #fa-arrow-right() _Test di Turing_ 🤖
+== Come - Apprendimento
+- Esempi di dati utilizzati: raccolti da web, libri, articoli, conversazioni
+  - Miliardi di parole 📚 #fa-arrow-right() #h(0.2em) richiederebbero *2600* anni per essere lette da un umano!
 
-- Se un AI può comprendere e generare linguaggio, può:
-  - Interagire con gli umani in modo più naturale 👥
-  - Apprendere da testi e conversazioni 📚
-  - Risolvere problemi complessi 🧠
+#align(center)[
+#image("figures/1-training.png", width: 60%)
+]
+
+== Come - Apprendimento
+- Esempi di dati utilizzati: raccolti da web, libri, articoli, conversazioni
+  - Miliardi di parole 📚 #fa-arrow-right() #h(0.2em) richiederebbero *2600* anni per essere lette da un umano!
+
+#align(center)[
+#image("figures/2-training.png", width: 60%)
+]
+
+== Come - Apprendimento
+- Esempi di dati utilizzati: raccolti da web, libri, articoli, conversazioni
+  - Miliardi di parole 📚 #fa-arrow-right() #h(0.2em) richiederebbero *2600* anni per essere lette da un umano!
+
+#align(center)[
+  #image("figures/training-3.png", width: 60%)
+]
 
 == Large, ma quanto?
 #align(center)[
@@ -141,7 +183,7 @@
   #image("figures/emergent.png")
 ]
 == LLM Impatto
-- Gli LLM ormai sono onnipresenti nella nostra vita quotidiana 📱 (pervasivi)
+- Gli LLM ormai sono entrati nella nostra vita quotidiana 📱(pervasivi)
   - *Assistenti Virtuali* (Siri, Alexa, Google Assistant)
   - *Traduzione Automatica* (Google Translate)
   - *Ricerca e Filtraggio Testi* (Bing)
@@ -149,30 +191,99 @@
 = Applicazioni degli LLM nella Vita Quotidiana
 
 == Chatbot e Assistenza Virtuale
+- *Chatbot* 🤖: software che simula conversazioni umane
+  - Esempi: *ChatGPT*, *Gemini*, *Claude*
+  - Capacità di adattarsi a diversi contesti e domande -- Via *Prompt*
+#components.side-by-side(columns: 4)[
+  #align(center)[
+    #image("figures/gpt.png", width: 60%)
+  ]
+][
+  #align(center)[
+    #image("figures/gemini.png", width: 60%)
+  ]
+][
+  #align(center)[
+    #image("figures/claude.png", width: 60%)
+  ]
+][
+  #align(center)[
+    #image("figures/deepseek.png", width: 60%)
+  ]
+]
+== Chatbot -- Operazioni di Base
+- Question Answering 🤔: Rispondere a domande
+  - *Esempio* 🤔: "Qual è la capitale dell'Italia?"
+- Summarization 📝: Riassumere testi
+  - *Esempio* 📝: "Riassumi l'articolo sul cambiamento climatico."
+- Translation 🌍: Tradurre testi
+  - *Esempio* 🌍: "Traduci questa frase in francese."
+- NB!! Attenzione alle allucinazioni
+
+== Chatbot -- Allucinazioni
+- *Allucinazioni* 🤯: generazione di testo non coerente o fuorviante
+- Questi modelli sono soggetti a *bias* e *errori* 🚨
+  - Provano a dare una risposta plausibile anche se non conoscono la risposta
+#image("figures/pay-attention.png")
 
 == Chatbot -- L'importanza del Prompt 
-- _Prompt_ 🚀: la *frase* o *domanda* iniziale che lʼutente scrive al chatbot.
+- _Prompt_ 🚀: la *frase* o *domanda* iniziale che l'utente scrive al chatbot.
 #pause
 - Un *buon prompt* è essenziale per ottenere risposte *accurate* e *utili*.
 #pause
 - Serve per *guidare* il chatbot verso la risposta desiderata 🤝
-  - Personal trainer 🏋️: "Sei un PT e mi devi aiutare a creare una scheda di allenamento personalizzata."
-  - Medico 🩺: "Sei un medico e mi devi aiutare a supportare la gestione della mia dieta."
-  - Chef 🍳: "Sei uno chef e mi devi aiutare a creare un menù gustoso e bilanciato."
-  - Avvocato ⚖️: "Sei un avvocato e mi devi aiutare a redigere un contratto di consulenza."
+  - *Personal trainer* 🏋️: "Sei un PT e mi devi aiutare a creare una scheda di allenamento personalizzata."
+  - *Medico* 🩺: "Sei un medico e mi devi aiutare a supportare la gestione della mia dieta."
+  - *Chef* 🍳: "Sei uno chef e mi devi aiutare a creare un menù gustoso e bilanciato."
+  - *Avvocato* ⚖️: "Sei un avvocato e mi devi aiutare a redigere un contratto di consulenza."
 
-== Chatbot: Supporto Legale
-== Chatbot: Supporto Sanitario
-== Chatbot: Personalizzazione del Tono
-== Chatbot: Sviluppo Software
-== Ricerca e Filtraggio Testi
-== Supporto alla Scrittura e Content Creation
-== Strumenti di Apprendimento Assistito
-== Human Augmentation -- LLM Per il Supporto ai Ciechi
-== Traduzione e Localizzazione
+== Chatbot: Consulenza Legale e Normativa
+- *Idea*: fornire le _normative_ e i _termini di legge_ necessari per la redazione di un contratto
+#align(center)[
+  #image("figures/regolamentazione.png", width: 40%)
+]
+== Chatbot: Chef Virtuale
+- *Idea*: dare _ricette_ e _consigli_ per cucinare _piatti gustosi_ e _salutari_
+#align(center)[
+  #image("figures/chef.png", width: 40%)
+]
+
+== Chatbot: Supporto Allo Studio
+- *Idea:* dare un _problema di matematica_ e _risolverlo_ in modo collaborativo
+#align(center)[
+  #image("figures/teaching.png", width: 40%)
+]
+
+== Chatbot: Sviluppo Software -- Copilot
+- *Idea*: implementare un sistema di *autocompletamento* in tempo reale mentre si scrive _codice_
+  - Fornire _snippet_ e _suggerimenti_ contestuali
+  - Ridurre errori di _sintassi_ e velocizzare lo sviluppo
+#align(center)[
+  #image("figures/code-generation.png", width: 60%)
+]
+
+
+== Supporto alla Scrittura e Content Creation -- Grammarly e MaxAI
+- *Idea*: AI in supporto alle attività di *scrittura* ✍️ e *creazione di contenuti*
+- *Cosa?*
+  - _Generare bozze_ a partire da un’idea 🤖
+  - _Correggere_ errori grammaticali e stilistici 📝
+  - _Cambiare tono_ (formale, amichevole, persuasivo) 🎨
+  - _Suggerire parole_, frasi e sinonimi 🤔
+  - _Individuare_ punti chiave e creare *riassunti rapidi* ⚡
+  - _Fornire spunti_ su stili narrativi diversi 📚
+
+
+== Strumenti di Apprendimento Assistito -- NotebookLM
+#align(center)[
+  #image("figures/notebookLM.png", width: 100%)
+]
+
+== Human Augmentation per Accessibilità
+- Gli LLM possono essere utilizzati anche per *potenziare* le capacità umane
+  - Ciechi: *riconoscere* immagini, *leggere* testi e *rispondere* a domande tramite assistenti vocali e visori specializzati
+  - Muti: *generare* testi, *tradurli* in parlato e *interagire* con gli altri in tempo reale
+  - Disabilità motorie: *digitazione predittiva*, *comandi vocali* e *navigazione* semplificata
+
 
 #focus-slide("Grazie per l'attenzione!")
-
-
-Nella presentazione di Giovedì verranno presentati i Large Language Models, modelli di intelligenza artificiale che stanno rivoluzionando il modo in cui interagiamo con i computer. Verranno esplorate le loro applicazioni nella vita quotidiana, come chatbot, assistenti virtuali e strumenti di supporto alla scrittura e concetti fondanti di come questi modelli funzionano e come sono stati addestrati. 
-. Un'occasione per capire come l'Intelligenza Artificiale sta cambiando il nostro modo di vivere e lavorare.
