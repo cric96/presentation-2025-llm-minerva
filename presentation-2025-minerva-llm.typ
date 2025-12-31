@@ -1,6 +1,6 @@
 #import "@preview/touying:0.5.2": *
 #import themes.metropolis: *
-#import "@preview/fontawesome:0.1.0": *
+#import "@preview/fontawesome:0.1.1": *
 #import "@preview/ctheorems:1.1.2": *
 #import "@preview/numbly:0.1.0": numbly
 
